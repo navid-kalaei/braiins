@@ -31,6 +31,7 @@ use ii_async_compat::bytes;
 
 use crate::error::{Error, ErrorKind, Result, ResultExt};
 use crate::v2::{self, noise::StaticPublicKey};
+use ed25519_dalek::Signer;
 
 mod formats;
 pub use formats::*;

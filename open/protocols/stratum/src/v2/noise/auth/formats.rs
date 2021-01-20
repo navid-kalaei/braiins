@@ -31,6 +31,8 @@ use super::{SignatureNoiseMessage, SignedPart, SignedPartHeader};
 use crate::error::{Error, Result};
 use crate::v2::noise::{StaticPublicKey, StaticSecretKey};
 
+use ed25519_dalek::ed25519::signature::Signature;
+
 /// Generates implementation for the encoded type, Display trait and the file format and
 macro_rules! impl_basic_type {
     ($encoded_struct_type:tt, $format_struct_type:ident, $inner_encoded_struct_type:ty,
